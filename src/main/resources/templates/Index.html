@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Post</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+</head>
+
+<body>
+<h1>Create new post</h1>
+
+<form action="/post" method="post">
+    <p>Create Post</p>
+    <textarea name="textarea" rows="10" cols="50"></textarea>
+    </br>
+
+    <button type="submit">Create</button>
+</form>
+<ul th:each="myPostList: ${myPostList}">
+    <p>ID</p><span th:text="${myPostList.id}"></span>
+    <p>Username</p><span th:text="${myPostList.username}"></span>
+    <p>textContent</p><span th:text="${myPostList.textContent}"></span>
+
+
+
+    <p>**********************************************************</p>
+
+
+
+
+
+
+
+</ul>
+
+</body>
+</html>
